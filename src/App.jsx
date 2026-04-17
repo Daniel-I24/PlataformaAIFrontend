@@ -46,12 +46,8 @@ const App = () => {
   } = useQuota(selectedUserId)
 
   // Hook de chat: historial de mensajes y envío
-  const {
-    messages,
-    isLoading: chatLoading,
-    sendMessage,
-    clearMessages,
-  } = useChat(selectedUserId, refreshQuota)
+  const { messages, isLoading: chatLoading, sendMessage, clearMessages } =
+    useChat(selectedUserId, refreshQuota)
 
   // Auto-scroll al último mensaje
   useEffect(() => {
